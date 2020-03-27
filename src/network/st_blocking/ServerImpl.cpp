@@ -140,6 +140,8 @@ void ServerImpl::OnRun() {
             continue;
         }
 
+        // std::thread(&ServerImpl::OnWorker, this);
+        
         // Got new connection
         if (_logger->should_log(spdlog::level::debug)) {
             std::string host = "unknown", port = "-1";
